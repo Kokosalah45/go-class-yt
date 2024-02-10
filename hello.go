@@ -5,6 +5,9 @@ import (
 	"strings"
 )
 
-func Say (name []string) string{
-	return fmt.Sprintf("Hello, %v", strings.Join(name, " ,")) 
+func Say(names []string) string {
+	if len(names) == 0 || names == nil {
+		names = []string{"World"}
+	}
+	return fmt.Sprintf("Hello, %v", strings.Join(names, ", "))
 }
