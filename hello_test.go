@@ -3,7 +3,7 @@ package hello
 import "testing"
 
 type testCases struct {
-	items []string
+	names []string
 	result string
 }
 
@@ -15,7 +15,7 @@ func TestSay(t *testing.T) {
 	}
 
 	for _,tc := range testCases {
-		actual := Say(tc.items)
+		actual := Say(tc.names)
 		if actual != tc.result {
 			t.Errorf("Expected: %v, but got: %v", tc.result, actual)
 		}
